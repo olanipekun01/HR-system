@@ -1,12 +1,23 @@
 import React from "react";
 import Auth from "./Auth";
 import List from "./List";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      {/* <Auth/> */}
-      <List />
+      <BrowserRouter>
+      
+        <Routes>
+        
+            {/* <Auth/> */}
+            <Route index element={<Auth />} />
+            <Route path="list" element={<List />} />
+            {/* <List /> */}
+          
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 };
